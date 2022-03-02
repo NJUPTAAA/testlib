@@ -1,4 +1,17 @@
 /* 
+ *
+ * ███╗   ██╗     ██╗███████╗    ████████╗███████╗███████╗████████╗██╗     ██╗██████╗ 
+ * ████╗  ██║     ██║██╔════╝    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝██║     ██║██╔══██╗
+ * ██╔██╗ ██║     ██║███████╗       ██║   █████╗  ███████╗   ██║   ██║     ██║██████╔╝
+ * ██║╚██╗██║██   ██║╚════██║       ██║   ██╔══╝  ╚════██║   ██║   ██║     ██║██╔══██╗
+ * ██║ ╚████║╚█████╔╝███████║       ██║   ███████╗███████║   ██║   ███████╗██║██████╔╝
+ * ╚═╝  ╚═══╝ ╚════╝ ╚══════╝       ╚═╝   ╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝╚═════╝ 
+ * 
+ * The <testlib.h> port for NOJ JudgeServer
+ * Originally written by Mike Mirzayanov, modified by John Zhang
+ * 
+ * Original Info:
+ * 
  * It is strictly recommended to include "testlib.h" before any other include 
  * in your code. In this case testlib overrides compiler specific "random()".
  *
@@ -25,7 +38,7 @@
  * Copyright (c) 2005-2021
  */
 
-#define VERSION "0.9.37-SNAPSHOT"
+#define VERSION "0.9.37-SNAPSHOT NOJ port #1"
 
 /* 
  * Mike Mirzayanov
@@ -274,7 +287,7 @@ const char *latestFeatures[] = {
 #   ifdef TESTSYS
 #       define PC_BASE_EXIT_CODE 50
 #   else
-#       define PC_BASE_EXIT_CODE 0
+#       define PC_BASE_EXIT_CODE 16
 #   endif
 #endif
 
@@ -3997,8 +4010,9 @@ void quitif(bool condition, TResult result, const char *format, ...) {
 
 NORETURN void __testlib_help() {
     InStream::textColor(InStream::LightCyan);
-    std::fprintf(stderr, "TESTLIB %s, https://github.com/MikeMirzayanov/testlib/ ", VERSION);
-    std::fprintf(stderr, "by Mike Mirzayanov, copyright(c) 2005-2020\n");
+    std::fprintf(stderr, "TESTLIB %s, https://github.com/NJUPTAAA/testlib/ ", VERSION);
+    std::fprintf(stderr, "ported by John Zhang, copyright(c) 2022\n");
+    std::fprintf(stderr, "originally by Mike Mirzayanov, copyright(c) 2005-2020\n");
     std::fprintf(stderr, "Checker name: \"%s\"\n", checkerName.c_str());
     InStream::textColor(InStream::LightGray);
 
