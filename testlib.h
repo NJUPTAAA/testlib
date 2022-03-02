@@ -1457,7 +1457,8 @@ enum TTestlibMode {
     _unknown, _checker, _validator, _generator, _interactor
 };
 
-#define _pc(exitCode) (TResult(_partially + (exitCode)))
+// #define _pc(exitCode) (TResult(_partially + (exitCode)))
+#define _pc(exitCode) (TResult(_wa))
 
 /* Outcomes 6-15 are reserved for future use. */
 const std::string outcomes[] = {
